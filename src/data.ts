@@ -42,3 +42,10 @@ let invoices = [
 export function getInvoices() {
     return invoices;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getInvoice(number: any){
+    return invoices.find(
+        (invoice) => invoice.number === number
+    );
+}
