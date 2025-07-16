@@ -2,9 +2,7 @@ import { useParams } from "react-router-dom";
 import { getInvoice } from "../../../data";
 
 export default function Invoice() {
-    // eslint-disable-next-line prefer-const, @typescript-eslint/no-unused-vars
     const params = useParams();
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const invoice = getInvoice(Number(params.invoiceId));
     return (
         <>

@@ -6,6 +6,7 @@ import Expenses from './routes/Expenses/index.tsx'
 import Invoices from './routes/Invoices/index.tsx'
 import NotFunding from './routes/NotFounding/index.tsx'
 import Invoice from './routes/Invoices/Invoice/index.tsx'
+import InvoicesIndex from './routes/Invoices/Invoicesindex/index.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -13,9 +14,10 @@ createRoot(document.getElementById('root')!).render(
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />} >
-            <Route path=":invoiceId" element={<Invoice/>} />  
+          <Route index element={<InvoicesIndex/>} />
+          <Route path=":invoiceId" element={<Invoice />} />
         </Route>
-        <Route path="*" element={<NotFunding/>} />
+        <Route path="*" element={<NotFunding />} />
       </Route>
     </Routes>
   </BrowserRouter>,

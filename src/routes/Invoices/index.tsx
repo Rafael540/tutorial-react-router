@@ -3,8 +3,7 @@ import { getInvoices } from "../../data";
 
 export default function Invoices() {
 
-    // eslint-disable-next-line prefer-const, @typescript-eslint/no-unused-vars
-    let invoices = getInvoices();
+   const invoices = getInvoices();
 
     return (
     
